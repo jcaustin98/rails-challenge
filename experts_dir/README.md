@@ -27,31 +27,42 @@ Some of the topics
 name John Sullivan 
 url https://en.wikipedia.org/wiki/John_Sullivan_(general)
 Some of the topics:
+```
  Revolutionary War
- 
+```
+
 name James Clinton
 url https://en.wikipedia.org/wiki/James_Clinton
 Some of the topics:
+```
  French and Indian War
  American Revolutionary War
  After War Years
+```
 Friendships
+```
  George Washington
  John Sullivan 
+```
  
 name Charles Clinton
 https://en.wikipedia.org/wiki/Charles_Clinton
 Indian War
-friendships
+Friendships
+```
  James Clinton
+```
 
 #Functional testing
 Select Charles Clinton
+```
 search for War
  Charles Clinton -> James Clinton -> John Sullivan  (Revolutionary War)
  Charles Clinton -> James Clinton -> George Washington (French and Indian War
  Charles Clinton -> James Clinton -> George Washington (Beginnings of War)
- 
+```
 Select Charles Clinton
+```
 search for Cherry
  Charles Clinton -> James Clinton -> George Washington (Cherry Tree)
+```
