@@ -1,3 +1,0 @@
-class Topic < ApplicationRecord
-
-end
