@@ -1,37 +1,68 @@
-# EverlyWell Ruby Challenge
+#Caveats
+Please be aware that in my phone screen, I said I had never done Ruby on Rails.
+Because of the learning curve, I did not get to refine and cleanup the code.
 
-### Overview
+There are a couple of problems that I did not get to fix due to time:
+ index/listing page - no friend count
+ view page - the friend drop down works, but shows duplicate names
+ 
+I also did not get to do any automated testing. Just ran out of time to learn and complete.
 
-Using Ruby on Rails, we'd like you to create a simple experts directory search tool. 
+I am very sure with more learning time, I could cleanup the code and write the automated tests.
 
-* We suggest starting out by forking this repo to a public one of your own. If you are concerned with the repo being public, this is not required.
+I did a lot of functional testing and documented some of it below.
 
-* Spend, at max, 4 hours on this project.
+#Functional testing setup
+Added: 
+name George Washington
+url https://en.wikipedia.org/wiki/George_Washington
+Some of the topics
+```
+ Cherry tree
+ French and Indian War
+ Between the wars: Mount Vernon (1759–1774)
+ Beginnings of War
+```
 
-* DO NOT USE SCAFFOLDING
+name John Sullivan 
+url https://en.wikipedia.org/wiki/John_Sullivan_(general)
+Some of the topics:
+```
+ Revolutionary War
+```
 
-### Requirements
+name James Clinton
+url https://en.wikipedia.org/wiki/James_Clinton
+Some of the topics:
+```
+ French and Indian War
+ American Revolutionary War
+ After War Years
+```
+Friendships
+```
+ George Washington
+ John Sullivan 
+```
+ 
+name Charles Clinton
+https://en.wikipedia.org/wiki/Charles_Clinton
+Indian War
+Friendships
+```
+ James Clinton
+```
 
-The application should fulfill the following requirements:
-
-* I enter a name and a personal website address and a member is created.
-
-* When a member is created, all the heading (h1-h3) values are pulled in from the website to that members profile.
-
-* The website url is shortened (e.g. using http://goo.gl).
-
-* After the member has been added, I can define their friendships with other existing members. Friendships are bi-directional i.e. If David is a friend of Oliver, Oliver is always a friend of David as well.
-
-* The interface should list all members with their name, short url and the number of friends e.g. Alan [http://goo.gl/3io1P](http://goo.gl/3io1P).
-
-* Viewing an actual member should display the name, website URL, shortening, website headings, and links to their friends' pages.
-
-* Now, looking at Alan's profile, I want to find experts in the application who write about a certain topic and are not already friends of Alan.
-
-* Results should show the path of introduction from Alan to the expert e.g. Alan wants to get introduced to someone who writes about 'Dog breeding'. Claudia's website has a heading tag "Dog breeding in Ukraine". Bart knows Alan and Claudia. An example search result would be Alan -> Bart -> Claudia ("Dog breeding in Ukraine").
-
-We encourage the use of gems and libraries for everything except the search functionality, in which we want to see your simple algorithm approach. For the back-end engineers, the front-end just needs to be clean and usable. Do not spend the majority of your time there.
-
-### Submission
-
-Once you've completed the technical requirements, please deploy the code to a free dyno on Heroku and include the URLs to the repo and the live instance in your submission.
+#Functional testing
+Select Charles Clinton
+```
+search for War
+ Charles Clinton -> James Clinton -> John Sullivan  (Revolutionary War)
+ Charles Clinton -> James Clinton -> George Washington (French and Indian War
+ Charles Clinton -> James Clinton -> George Washington (Beginnings of War)
+```
+Select Charles Clinton
+```
+search for Cherry
+ Charles Clinton -> James Clinton -> George Washington (Cherry Tree)
+```
